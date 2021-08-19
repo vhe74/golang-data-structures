@@ -18,9 +18,10 @@ func (l linkedList) Len() int {
 }
 
 func (l linkedList) Display() {
-	for l.head != nil {
-		fmt.Printf("%v -> ", l.head.data)
-		l.head = l.head.next
+	n := l.head
+	for n != nil {
+		fmt.Printf("%v-->", n.data)
+		n = n.next
 	}
 	fmt.Println()
 }
@@ -47,4 +48,5 @@ func main() {
 	n = &node{data: "Valentine"}
 	list.PushBack(n)
 	list.Display()
+
 }
